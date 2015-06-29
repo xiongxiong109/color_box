@@ -1,0 +1,130 @@
+/*移动端单页布局基本样式:Bear Cambridge*/
+/*reset*/
+html,body,div,section,img,div,h1,h2,h3,h4,h5,em{margin: 0;padding: 0;}
+img{vertical-align: middle;}
+html, body {width: 100%;height: 100%;-webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */user-select: none;}
+body{font-size: 16px;font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;overflow: hidden;}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */}
+a,button,img{outline: none;}
+/*common*/
+section{width: 100%;height: 100%;position: absolute;left: 0;top: 0;overflow: hidden;}
+.page-wrap{width: 100%;height: 100%;position:relative;left: 0;top: 0;}
+.page{-webkit-animation-play-state: paused;-o-animation-play-state: paused;animation-play-state: paused;display: none;}
+.show{-webkit-animation-play-state: running;-o-animation-play-state: running;animation-play-state: running;display: block;}
+
+/*media query*/
+@media screen and (min-width: 1400px){
+	body{background-color: #000;}
+	section{width:40%;left: 30%;background-color: #fff;}
+}
+
+/*loading*/
+.p-loading{
+	text-align: center;
+	font-size: 0.85em;
+	font-family: "微软雅黑";
+	background:-webkit-linear-gradient(top left,#F6F7C3,#FF9DB7);
+	background:-moz-linear-gradient(top left,#F6F7C3,#FF9DB7);
+	background:-ms-linear-gradient(top left,#F6F7C3,#FF9DB7);
+	background:-o-linear-gradient(top left,#F6F7C3,#FF9DB7);
+	background:linear-gradient(top left,#F6F7C3,#FF9DB7);
+	color: #050505;
+}
+.loading-box{
+	width: 150px;
+	margin: 0 auto;
+	height: 150px;
+	border-left: 10px dotted #D680ED;
+	border-right: 10px dotted #A2B4FC;
+	border-radius: 50%;
+	margin-top: 25%;
+}
+/*loading end*/
+/*start*/
+.p-start{
+	background-color:#C4D0FF;
+}
+.content{
+	width: 90%;
+	text-align: center;
+	margin:auto;
+	padding: 40% 0;
+}
+h1{font-size: 1em;}
+.content p{font-size: 0.85em;line-height: 1.8em;text-shadow:1px 1px 1px #fff;}
+.btn{width: 40%;height: 35px;line-height:35px;text-align: center;color: #fff;margin:0 auto;background-color:#6666D8;border-radius: 5px;}
+/*start end*/
+
+/*main */
+.p-main{
+	text-align: center;
+}
+h4{padding: 5%;}
+#card{font-size: 1.2em;font-weight: bold;color: #cd0000;padding:0 5px;}
+#time{float: right;}
+h5{text-align: left;text-indent: 2em;font-size:0.85em;}
+#judger,#number{font-size: 1.5em;padding: 5px;color: #cd0000;}
+
+#btnBox{
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	zoom: 1;
+	padding:10px;
+}
+.tap-btn{
+	width:48%;
+	height: 80px;
+	float: left;
+	margin:0 1%;
+}
+/*main end*/
+/*动画*/
+/*spin*/
+.spin{
+	-webkit-animation: spin 1s ease infinite alternate;
+	animation: spin 1s ease infinite alternate;
+}
+@-webkit-keyframes spin{
+	from{
+		-webkit-transform:rotateZ(0deg) scale(1,1);
+		opacity: 1;
+		border-left: 10px dotted #D680ED;
+		border-right: 10px dotted #A2B4FC;
+	}
+	to{
+		-webkit-transform:rotateZ(720deg) scale(0.5,0.5);
+		opacity: 0.5;
+		border-left: 10px dotted #A004FC;
+		border-right: 10px dotted #D6000D;
+	}
+}
+@keyframes spin{
+	from{
+		transform:rotateZ(0deg) scale(1,1);
+		opacity: 1;
+		border-left: 10px dotted #D680ED;
+		border-right: 10px dotted #A2B4FC;
+	}
+	to{
+		transform:rotateZ(720deg) scale(0.5,0.5);
+		opacity: 0.5;
+		border-left: 10px dotted #A004FC;
+		border-right: 10px dotted #D6000D;
+	}
+}
+
+/*animation delay*/
+.d1{
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+.d2{
+	-webkit-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+.d3{
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
