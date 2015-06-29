@@ -12,12 +12,6 @@ section{width: 100%;height: 100%;position: absolute;left: 0;top: 0;overflow: hid
 .page{-webkit-animation-play-state: paused;-o-animation-play-state: paused;animation-play-state: paused;display: none;}
 .show{-webkit-animation-play-state: running;-o-animation-play-state: running;animation-play-state: running;display: block;}
 
-/*media query*/
-@media screen and (min-width: 1400px){
-	body{background-color: #000;}
-	section{width:40%;left: 30%;background-color: #fff;}
-}
-
 /*loading*/
 .p-loading{
 	text-align: center;
@@ -52,7 +46,7 @@ section{width: 100%;height: 100%;position: absolute;left: 0;top: 0;overflow: hid
 }
 h1{font-size: 1em;}
 .content p{font-size: 0.85em;line-height: 1.8em;text-shadow:1px 1px 1px #fff;}
-.btn{width: 40%;height: 35px;line-height:35px;text-align: center;color: #fff;margin:0 auto;background-color:#6666D8;border-radius: 5px;}
+.btn{width: 40%;height: 35px;line-height:35px;text-align: center;color: #fff;margin:10px auto;background-color:#6666D8;border-radius: 5px;}
 /*start end*/
 
 /*main */
@@ -62,22 +56,49 @@ h1{font-size: 1em;}
 h4{padding: 5%;}
 #card{font-size: 1.2em;font-weight: bold;color: #cd0000;padding:0 5px;}
 #time{float: right;}
-h5{text-align: left;text-indent: 2em;font-size:0.85em;}
-#judger,#number{font-size: 1.5em;padding: 5px;color: #cd0000;}
+h5{text-align: left;width: 90%;margin:0 auto;font-size:0.85em;}
+#judger,#number,#totalTime,#totalCnt{font-size: 1.5em;padding: 5px;color: #cd0000;}
 
 #btnBox{
 	width: 90%;
-	margin: 0 auto;
+	margin:15% auto 0;
 	border: 1px solid #ccc;
 	overflow: hidden;
 	zoom: 1;
 	padding:10px;
 }
+
+#shareOverlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,0.5);
+	display: none;
+	text-align: right;
+}
+#shareOverlay img{
+	width: 70%;
+}
 .tap-btn{
 	width:48%;
 	height: 80px;
 	float: left;
-	margin:0 1%;
+	margin:0 1% 2%;
+}
+.p-over{
+	background-color:rgba(255,255,255,0.8);
+	text-align: center;
+}
+.p-over h4{
+	font-size: 1.5em;
+	margin-top: 25%;
+	padding: 2%;
+	color: #3C58E7;
+}
+.p-over p{
+	font-size: 1.2em;
 }
 /*main end*/
 /*动画*/
@@ -127,4 +148,16 @@ h5{text-align: left;text-indent: 2em;font-size:0.85em;}
 .d3{
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
+}
+
+/*media query*/
+@media screen and (min-width: 1400px){
+	body{background-color: #000;}
+	section{width:40%;left: 30%;background-color: #fff;}
+}
+@media screen and (min-width: 1300px){
+	.content{padding: 20% 0;}
+}
+@media screen and (min-width: 1024px){
+	body{font-size: 20px;}
 }

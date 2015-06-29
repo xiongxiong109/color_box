@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta name="Keywords" content="方块, 颜色, 手速"/>
+	<meta name="Description" content="看你有多嗨，虐心小游戏"/>
 	<title>看你有多嗨</title>
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
@@ -15,19 +16,19 @@
 			if(document.readyState=='complete'){
 				
 				//从游戏加载页面进入游戏选择页面
-				// $(".p-loading").fadeOut(400,function(){
-				// 	$(this).removeClass('show');
-				// });
-				// $(".p-start").fadeIn(400,function(){
-				// 	$(this).addClass('show');
-				// });
+				$(".p-loading").fadeOut(400,function(){
+					$(this).removeClass('show');
+				});
+				$(".p-start").fadeIn(400,function(){
+					$(this).addClass('show');
+				});
 
 			}
 		}
 	</script>
 <body>
 	<!-- loading -->
-	<section class="page p-loading">
+	<section class="page p-loading show">
 		<div class="page-wrap">
 			<div class="loading-box spin"></div>
 			<p>游戏加载中...</p>
@@ -40,12 +41,15 @@
 			<div class="content">
 				<h1 class="animated rubberBand">看你有多嗨</h1>
 				<p class="animated bounceInDown d1">前方高能!!这是一个丧心病狂的小游戏!操作灰常简单，请根据你看到的提示点击正确的小方块,看你有能多嗨~</p>
+				<p class="animated bounceInDown d2">作者:熊熊109, QQ:444122662</p>
+				<p class="animated bounceInDown d3">欢迎一起学习交流!</p>
 				<div class="btn animated bounceInUp d2" id="startBtn">开始游戏</div>
 			</div>
 		</div>
 	</section>
 	<!-- start end -->
-	<div class="page p-main show">
+	<!-- main -->
+	<section class="page p-main">
 		<div class="page-wrap">
 			<h4 class="animated fadeInDown">第<span id="card">1</span>关<span id="time">0.0</span></h4>
 			<div id="gameContent">
@@ -54,7 +58,21 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<!-- main end -->
+	<section class="page p-over">
+		<div class="page-wrap">
+			<h4 class="animated bounceInDown" id="gameStatus">游戏结束!</h4>
+			<p class="animated bounceInDown d1">本次用时:<span id="totalTime">8.2</span>秒!</p>
+			<p class="animated bounceInDown d2">一共完成了<span id="totalCnt">2</span>次点击</p>
+			<div class="btn" id="next">下一关</div>
+			<div class="btn" id="restart">重新开始</div>
+			<div class="btn" id="share">炫耀分享</div>
+		</div>
+		<div id="shareOverlay">
+			<img src="img/share.png" alt="">
+		</div>
+	</section>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
