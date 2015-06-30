@@ -86,18 +86,18 @@ $(function(){
 		},200,'ease',function(){
 
 		$(".p-over").removeClass('show');
-		var ca=game.settings.card+1;
-		var t=ca;
+		var ca=game.settings.card;
+		var t=ca+1;
 		if(t>=gameArr.length-1){
 			//游戏被打爆了
 			t=gameArr.length-1;
 		}
-		console.log( gameArr[t] );
+		// console.log( gameArr[ca] );
 		game.init({
-			card:ca,//初始关卡
-			time:gameArr[t].time,//每一关的游戏时间 ms
-			number:gameArr[t].number,//每一关的点击次数
-			box:gameArr[t].box//初始方块数
+			card:t,//初始关卡
+			time:gameArr[ca].time,//每一关的游戏时间 ms
+			number:gameArr[ca].number,//每一关的点击次数
+			box:gameArr[ca].box//初始方块数
 		});
 
 		game.start();
